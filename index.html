@@ -328,9 +328,33 @@ footer{
         <li>✔ Entrega garantizada</li>
       </ul>
 
-      <a href="https://wa.me/573137900448?text=Hola%2C%20ya%20vi%20la%20informaci%C3%B3n%20de%20la%20p%C3%A1gina%20y%20tengo%20unas%20preguntas%20sobre%20los%20paquetes%20de%20pre%2015." class="hero-btn" target="_blank">
-        👉 Reservar fecha por WhatsApp
-      </a>
+     <div class="scroll-indicator-fixed">
+  <span>👇 Desliza para ver paquetes y precios disponibles</span>
+</div>
+<style>
+.scroll-indicator-fixed {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.scroll-indicator-fixed span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+</style>
 
     </div>
   </section>
