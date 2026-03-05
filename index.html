@@ -410,422 +410,305 @@ footer{
   </div>
 </section>
 
-<!-- ================= ESTILOS ================= -->
 <style>
-.banner-precios{
-  position:relative;
-  background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
-    url('https://lh3.googleusercontent.com/pw/AP1GczOltjJ_KIJDKJkl0HR2PWFcQaERN7K2xDTS-bo7zOG7GT_-Ywrh6AzaFufZpLmP-Xz5rE4EKoGvugajWoyNglFZUUfcsDdbrTcGpxuOT5IIsfewM5n8FutVchXRV1aPT8rISvQB6UxdDE-ZpmhTi0-iYg=w619-h929-s-no-gm?authuser=0')
-    center/cover no-repeat;
-  border-radius:25px;
-  padding:70px 40px;
-  box-shadow:0 25px 50px rgba(0,0,0,.5);
-  overflow:hidden;
+
+/* SECCION */
+
+.paquetes-section{
+padding:80px 20px;
+background:#0e0e0e;
+color:#fff;
+text-align:center;
 }
 
-/* TEXTO */
-.banner-precios .texto{
-  max-width:760px;
-  position:relative;
-  z-index:2;
+/* TITULOS */
+
+.titulo-paquetes{
+font-size:2.4rem;
+margin-bottom:10px;
 }
 
-.banner-precios h2{
-  font-size:2.4rem;
-  margin-bottom:20px;
+.subtitulo-paquetes{
+color:#bbb;
+margin-bottom:50px;
 }
 
-.banner-precios p{
-  font-size:1.05rem;
-  margin-bottom:15px;
-  color:#ddd;
+/* GRID */
+
+.paquetes-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+max-width:1300px;
+margin:auto;
 }
 
-.tachado{
-  text-decoration:line-through;
-  color:#ff7b7b;
-  font-weight:bold;
+/* TARJETAS */
+
+.paquete{
+background:linear-gradient(180deg,#1a1a1a,#111);
+border-radius:25px;
+padding:40px 30px;
+box-shadow:0 30px 70px rgba(0,0,0,.7);
+text-align:center;
+transition:.4s;
 }
 
-.oferta{
-  font-size:2rem;
-  font-weight:bold;
-  color:#25D366;
-  margin:20px 0;
+.paquete:hover{
+transform:translateY(-8px);
 }
 
-.oferta span{
-  font-size:2.4rem;
+/* TITULO */
+
+.paquete h3{
+font-size:1.7rem;
+margin-bottom:15px;
 }
 
-.cta-texto{
-  color:#bbb;
-}
+/* PRECIO */
 
-/* SELLO AHORRO */
-.sello-ahorro{
-  position:absolute;
-  top:25px;
-  right:25px;
-  background:linear-gradient(135deg,#ffcc00,#ff9900);
-  color:#000;
-  padding:15px 18px;
-  border-radius:50%;
-  text-align:center;
-  font-weight:800;
-  font-size:1rem;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
-  transform:rotate(8deg);
-  animation:pulse 2.8s infinite;
-}
-
-.sello-ahorro span{
-  font-size:1.2rem;
-}
-
-/* ANIMACIÓN SUAVE */
-.animate{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 1s ease;
-}
-
-.animate.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* PULSE SELLO */
-@keyframes pulse{
-  0%{transform:scale(1) rotate(8deg);}
-  50%{transform:scale(1.05) rotate(8deg);}
-  100%{transform:scale(1) rotate(8deg);}
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .banner-precios{
-    padding:50px 25px;
-  }
-
-  .banner-precios h2{
-    font-size:2rem;
-  }
-
-  .sello-ahorro{
-    top:15px;
-    right:15px;
-    font-size:.9rem;
-  }
-}
-</style>
-
-<!-- ================= JS ANIMACIÓN SCROLL ================= -->
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.3});
-
-document.querySelectorAll(".animate").forEach(el=>{
-  observer.observe(el);
-});
-</script>
-
-
-<!-- ================= SECCIÓN PAQUETES ================= -->
-<section class="paquetes-section">
-
-  <h2 class="titulo-paquetes">Paquetes de Fotografía para Pre 15 Años</h2>
-  <p class="subtitulo-paquetes">
-    Precios económicos en Pereira · Calidad profesional garantizada
-  </p>
-
-  <div class="paquetes-grid">
-
-    <!-- ===== PAQUETE BÁSICO ===== -->
-    <div class="paquete basico">
-      <h3>Paquete Básico</h3>
-      <p class="precio">$650.000</p>
-
-      <ul>
-        <li>✔ Sesión de fotos pre-15 al aire libre</li>
-        <li>✔ 15 fotos digitales</li>
-        <li>✔ Fotos alta calidad</li>
-        <li>✔ Entrega por WhatsApp</li>
-      </ul>
-
-      
-      </a>
-    </div>
-
-    <!-- ===== PAQUETE STANDARD ===== -->
-    <div class="paquete standard">
-      <h3>Paquete Standard</h3>
-      <p class="precio">$750.000</p>
-
-      <ul>
-        <li>✔ Sesión de fotos pre-15 al aire libre</li>
-        <li>✔ Photobook tamaño (20x30)</li>
-        <li>✔ 20 a 30 fotos</li>
-        <li>✔ Fotos digitales</li>
-        <li>✔ Fotos con familiares</li>
-      </ul>
-
-     
-      </a>
-    </div>
-
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Paquete Premium – Fotografía 15 Años</title>
-
-<style>
-body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:#0e0e0e;
-  color:#fff;
-}
-
-/* CONTENEDOR */
-.seccion-paquetes{
-  padding:80px 20px;
-  display:flex;
-  justify-content:center;
-gap: 30px;
-}
-
-/* TARJETA PREMIUM */
-.paquete.premium{
-  position:relative;
-  max-width:420px;
-  width:100%;
-  background:linear-gradient(180deg,#1a1a1a,#111);
-  border-radius:25px;
-  padding:45px 35px;
-  text-align:center;
-  box-shadow:0 40px 90px rgba(0,0,0,.8);
-  animation:premiumFloat 4s ease-in-out infinite;
-  border:2px solid rgba(37,211,102,.5);
-}
-
-/* ANIMACIÓN TARJETA */
-@keyframes premiumFloat{
-  0%{transform:translateY(0) scale(1);}
-  50%{transform:translateY(-10px) scale(1.02);}
-  100%{transform:translateY(0) scale(1);}
-}
-
-/* BADGES */
-.badge-top{
-  position:absolute;
-  top:-18px;
-  left:50%;
-  transform:translateX(-50%);
-  background:gold;
-  color:#000;
-  padding:8px 22px;
-  border-radius:20px;
-  font-weight:900;
-  font-size:.9rem;
-}
-
-/* ===== BADGE EL MÁS ELEGIDO ===== */
-.badge-elegido{
-  position:absolute;
-  top:15px;
-  right:15px;
-  background:linear-gradient(135deg,#25D366,#9effc8);
-  color:#000;
-  padding:8px 16px;
-  border-radius:20px;
-  font-size:.85rem;
-  font-weight:900;
-  box-shadow:0 8px 25px rgba(37,211,102,.55);
-  animation:elegidoPulse 2.8s infinite ease-in-out;
-  z-index:5;
-}
-
-@keyframes elegidoPulse{
-  0%{
-    transform:scale(1) rotate(0deg);
-    box-shadow:0 0 0 0 rgba(37,211,102,.6);
-  }
-  40%{
-    transform:scale(1.12) rotate(-2deg);
-    box-shadow:0 0 0 14px rgba(37,211,102,0);
-  }
-  70%{
-    transform:scale(1.05) rotate(2deg);
-  }
-  100%{
-    transform:scale(1) rotate(0deg);
-    box-shadow:0 0 0 0 rgba(37,211,102,0);
-  }
-}
-
-.paquete.premium:hover .badge-elegido{
-  animation:elegidoHover 1.2s infinite alternate;
-}
-
-@keyframes elegidoHover{
-  from{transform:scale(1.15);}
-  to{transform:scale(1.28);}
-}
-
-/* TEXTO */
-h3{
-  margin-top:35px;
-  font-size:2rem;
-}
-
-.estrellas{
-  font-size:1.4rem;
-  margin:10px 0;
-}
-
-.precio-premium{
-  font-size:2.8rem;
-  color:#25D366;
-  font-weight:900;
-}
-
-.precio-antes{
-  text-decoration:line-through;
-  color:#ff7b7b;
-  font-size:1rem;
-}
-
-.ahorro{
-  display:inline-block;
-  margin-top:10px;
-  background:gold;
-  color:#000;
-  padding:7px 18px;
-  border-radius:20px;
-  font-weight:800;
+.precio{
+font-size:2rem;
+font-weight:900;
+color:#25D366;
+margin-bottom:20px;
 }
 
 /* LISTA */
-ul{
-  list-style:none;
-  padding:0;
-  margin:35px 0;
-  text-align:left;
+
+.paquete ul{
+list-style:none;
+padding:0;
+margin-top:25px;
+text-align:left;
 }
 
-ul li{
-  margin-bottom:12px;
-  font-size:.95rem;
+.paquete ul li{
+margin-bottom:12px;
+font-size:.95rem;
 }
 
-/* BOTÓN WHATSAPP */
+/* PREMIUM */
+
+.paquete.premium{
+border:2px solid rgba(37,211,102,.6);
+position:relative;
+}
+
+/* BADGE TOP */
+
+.badge-top{
+position:absolute;
+top:-15px;
+left:50%;
+transform:translateX(-50%);
+background:gold;
+color:#000;
+padding:7px 20px;
+border-radius:20px;
+font-weight:900;
+font-size:.85rem;
+}
+
+/* BADGE MAS ELEGIDO */
+
+.badge-elegido{
+position:absolute;
+top:15px;
+right:15px;
+background:linear-gradient(135deg,#25D366,#9effc8);
+color:#000;
+padding:6px 14px;
+border-radius:20px;
+font-size:.8rem;
+font-weight:900;
+box-shadow:0 8px 25px rgba(37,211,102,.55);
+}
+
+/* BOTON WHATSAPP */
+
 .btn-whatsapp{
-  display:inline-block;
-  margin-top:20px;
-  background:#25D366;
-  color:#000;
-  padding:18px 36px;
-  border-radius:50px;
-  font-size:1.1rem;
-  font-weight:900;
-  text-decoration:none;
-  animation:pulse 2.5s infinite;
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
-  70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+display:inline-block;
+margin-top:25px;
+background:#25D366;
+color:#000;
+padding:16px 32px;
+border-radius:40px;
+font-weight:900;
+text-decoration:none;
 }
 
 .btn-whatsapp:hover{
-  transform:scale(1.08);
+transform:scale(1.05);
 }
 
-/* NOTA */
+/* TEXTO PREMIUM */
+
+.estrellas{
+font-size:1.3rem;
+margin:10px 0;
+}
+
+.precio-premium{
+font-size:2.5rem;
+font-weight:900;
+color:#25D366;
+}
+
+.precio-antes{
+text-decoration:line-through;
+color:#ff7b7b;
+}
+
+.ahorro{
+display:inline-block;
+margin-top:10px;
+background:gold;
+color:#000;
+padding:6px 16px;
+border-radius:20px;
+font-weight:800;
+}
+
 .nota{
-  margin-top:20px;
-  font-size:.85rem;
-  color:#ccc;
+margin-top:20px;
+font-size:.85rem;
+color:#ccc;
 }
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.paquetes-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.paquetes-grid{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
-</head>
 
-<body>
 
-<section class="seccion-paquetes">
+<section class="paquetes-section">
 
-  <!-- ===== PAQUETE PREMIUM ===== -->
-  <div class="paquete premium">
+<h2 class="titulo-paquetes">Paquetes de Fotografía para Pre 15 Años</h2>
 
-    <div class="badge-top">TOP QUALITY</div>
-    <div class="badge-elegido">⭐ El más elegido</div>
+<p class="subtitulo-paquetes">
+Precios económicos en Pereira · Calidad profesional garantizada
+</p>
 
-    <h3>Paquete Premium</h3>
 
-    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+<div class="paquetes-grid">
 
-    <p class="precio-premium">$850.000</p>
-    <p class="precio-antes">$1.500.000</p>
-    <span class="ahorro">Ahorra $650.000</span>
+<!-- ===== PAQUETE BASICO ===== -->
 
-    <ul>
-      <li>✔ Sesión de fotos pre-15 al aire libre</li>
-        <li>✔ Photobook Premium tamaño (20x30)</li>
-        <li>✔ 20 a 40 fotos</li>
-        <li>✔ Fotos digitales alta calidad</li>
-        <li>✔ Fotos con familiares</li>
-      <li>✔ Hermoso video tipo trailer</li>
-      <li>✔ Bonos GRATIS incluidos</li>
-    </ul>
+<div class="paquete basico">
 
-   <a href="https://wa.me/573137900448?text=Hola%2C%20ya%20vi%20la%20informaci%C3%B3n%20de%20la%20p%C3%A1gina%20y%20tengo%20unas%20preguntas%20sobre%20los%20paquetes%20de%20pre%2015."
-   class="btn-whatsapp"
-   onclick="fbq('track', 'Lead');"
-   target="_blank">
-   📲 Reservar por WhatsApp
+<h3>Paquete Básico</h3>
+
+<p class="precio">$650.000</p>
+
+<ul>
+<li>✔ Sesión de fotos pre-15 al aire libre</li>
+<li>✔ 15 fotos digitales</li>
+<li>✔ Fotos alta calidad</li>
+<li>✔ Entrega por WhatsApp</li>
+</ul>
+
+</div>
+
+
+<!-- ===== PAQUETE STANDARD ===== -->
+
+<div class="paquete standard">
+
+<h3>Paquete Standard</h3>
+
+<p class="precio">$750.000</p>
+
+<ul>
+<li>✔ Sesión de fotos pre-15 al aire libre</li>
+<li>✔ Photobook tamaño (20x30)</li>
+<li>✔ 20 a 30 fotos</li>
+<li>✔ Fotos digitales</li>
+<li>✔ Fotos con familiares</li>
+</ul>
+
+</div>
+
+
+<!-- ===== PAQUETE PREMIUM ===== -->
+
+<div class="paquete premium">
+
+<div class="badge-top">TOP QUALITY</div>
+<div class="badge-elegido">⭐ El más elegido</div>
+
+<h3>Paquete Premium</h3>
+
+<div class="estrellas">⭐⭐⭐⭐⭐</div>
+
+<p class="precio-premium">$850.000</p>
+<p class="precio-antes">$1.500.000</p>
+
+<span class="ahorro">Ahorra $650.000</span>
+
+<ul>
+<li>✔ Sesión de fotos pre-15 al aire libre</li>
+<li>✔ Photobook Premium tamaño (20x30)</li>
+<li>✔ 20 a 40 fotos</li>
+<li>✔ Fotos digitales alta calidad</li>
+<li>✔ Fotos con familiares</li>
+<li>✔ Hermoso video tipo trailer</li>
+<li>✔ Bonos GRATIS incluidos</li>
+</ul>
+
+<a href="https://wa.me/573137900448?text=Hola%2C%20ya%20vi%20la%20informaci%C3%B3n%20de%20la%20p%C3%A1gina%20y%20tengo%20unas%20preguntas%20sobre%20los%20paquetes%20de%20pre%2015."
+class="btn-whatsapp"
+onclick="fbq('track', 'Lead');"
+target="_blank">
+📲 Reservar por WhatsApp
 </a>
 
+<p class="nota">Cupos limitados · Reserva anticipada</p>
 
-    <p class="nota">Cupos limitados · Reserva anticipada</p>
-
-
-
-    
-      </a>
-  </div>
-
-    <!-- ===== PAQUETE TODO INCLUÍDO ===== -->
-    <div class="paquete todo incluído">
-      <h3>paquete todo incluído</h3>
-      <p class="precio">$2.400.000</p>
-
-      <ul>
-        <li>✔ Vestido + Tiara</li>
-        <li>✔ maquillaje y peinado</li>
-        <li>✔ alquiler del caballo y lugar</li>
-        <li>✔ Sesión de fotos pre-15 al aire libre</li>
-        <li>✔ Photobook Premium tamaño (20x30)</li>
-        <li>✔ 20 a 40 fotos</li>
-        <li>✔ Fotos digitales alta calidad</li>
-        <li>✔ Fotos con familiares</li>
-      <li>✔ Hermoso video tipo trailer</li>
-      <li>✔ Bonos GRATIS incluidos</li>
-      </ul>
+</div>
 
 
-      
-      </a>
-    </div>
+<!-- ===== PAQUETE TODO INCLUIDO ===== -->
 
+<div class="paquete todo-incluido">
+
+<h3>paquete todo incluído</h3>
+
+<p class="precio">$2.400.000</p>
+
+<ul>
+<li>✔ Vestido + Tiara</li>
+<li>✔ maquillaje y peinado</li>
+<li>✔ alquiler del caballo y lugar</li>
+<li>✔ Sesión de fotos pre-15 al aire libre</li>
+<li>✔ Photobook Premium tamaño (20x30)</li>
+<li>✔ 20 a 40 fotos</li>
+<li>✔ Fotos digitales alta calidad</li>
+<li>✔ Fotos con familiares</li>
+<li>✔ Hermoso video tipo trailer</li>
+<li>✔ Bonos GRATIS incluidos</li>
+</ul>
+
+</div>
+
+
+</div>
+</section>
   
 </section>
 
