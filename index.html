@@ -411,6 +411,92 @@ footer{
 </section>
 
 <style>
+/* CONTENEDOR GENERAL */
+.banner-precios{
+  position: relative;
+  background-image: url("img/fondo-precios.jpg"); /* CAMBIA LA RUTA */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+}
+
+/* CAPA OSCURA PARA QUE EL TEXTO RESALTE */
+.banner-precios::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.65);
+  z-index:0;
+}
+
+.banner-precios > *{
+  position:relative;
+  z-index:1;
+}
+
+/* SELLO AHORRO */
+.sello-ahorro{
+  position:absolute;
+  top:30px;
+  left:30px;
+  background: linear-gradient(135deg,#00c851,#007e33);
+  padding:18px 22px;
+  border-radius:14px;
+  font-weight:bold;
+  font-size:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  animation: flotar 2s ease-in-out infinite;
+}
+
+.sello-ahorro span{
+  font-size:26px;
+  color:#ffe600;
+}
+
+/* TITULO */
+.texto h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+/* PARRAFOS */
+.texto p{
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+
+/* COMPARATIVA */
+.tachado{
+  text-decoration: line-through;
+  color:#ff6b6b;
+  font-weight:bold;
+}
+
+/* PRECIO OFERTA */
+.oferta span{
+  font-size:34px;
+  font-weight:900;
+  color:#00ff88;
+}
+
+/* CTA */
+.cta-texto{
+  opacity:.85;
+}
+
+/* ANIMACION */
+@keyframes flotar{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px); }
+  100%{ transform:translateY(0); }
+}
+</style>
+  
+<style>
 
 /* SECCION */
 
